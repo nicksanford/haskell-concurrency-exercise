@@ -9,14 +9,14 @@ I found when I profiled the Haskell implementation of concurrent-wc that only
 4 system threads on my macbook (found via threadscope) and that over 95% of the
 work was being spent in counting newlines.
 
-![original.png](https://raw.githubusercontent.com/nicksanford/concurrency-exercise/master/images/original.png)
+![original.png](https://github.com/nicksanford/haskell-concurrency-exercise/blob/master/images/original.png)
 
 This is a simplified version of that implementation which still is not able to
 efficiently parallelize work between 4 cores (the vast majority of work is
 done by a single system thread) despite the fact that I spawn a green thread per
 file.
 
-![original.png](https://raw.githubusercontent.com/nicksanford/concurrency-exercise/master/images/new.png)
+![new.png](https://github.com/nicksanford/haskell-concurrency-exercise/blob/master/images/new.png)
 
 I have added thread tracing information and a `./profile.sh` script to generate
 profiling information.
