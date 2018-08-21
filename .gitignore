@@ -1,3 +1,6 @@
 .stack-work/
 wc-l.cabal
 *~
+*.swp
+*.swo
+*.swn
