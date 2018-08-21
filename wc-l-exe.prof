@@ -1,19 +1,19 @@
-	Tue Aug 21 16:32 2018 Time and Allocation Profiling Report  (Final)
+	Tue Aug 21 16:42 2018 Time and Allocation Profiling Report  (Final)
 
-	   wc-l-exe +RTS -N -p -RTS ../concurrent-wc/tmp/
+	   wc-l-exe +RTS -N -p -RTS ./tmp/
 
-	total time  =        0.08 secs   (312 ticks @ 1000 us, 4 processors)
-	total alloc = 435,792,272 bytes  (excludes profiling overheads)
+	total time  =        0.08 secs   (302 ticks @ 1000 us, 4 processors)
+	total alloc = 435,701,352 bytes  (excludes profiling overheads)
 
 COST CENTRE                MODULE SRC                         %time %alloc
 
-readAndCountNewlinesWorker Main   app/Main.hs:(18,1)-(26,11)   98.7   99.8
+readAndCountNewlinesWorker Main   app/Main.hs:(18,1)-(26,11)   99.0   99.9
 
 
                                                                                                      individual      inherited
 COST CENTRE                      MODULE                SRC                        no.     entries  %time %alloc   %time %alloc
 
-MAIN                             MAIN                  <built-in>                 184          0    1.0    0.0   100.0  100.0
+MAIN                             MAIN                  <built-in>                 184          0    0.7    0.0   100.0  100.0
  CAF                             System.Directory      <entire-module>            333          0    0.0    0.0     0.0    0.0
  CAF                             System.FilePath.Posix <entire-module>            325          0    0.0    0.0     0.0    0.0
  CAF                             GHC.Conc.Signal       <entire-module>            280          0    0.0    0.0     0.0    0.0
@@ -33,7 +33,7 @@ MAIN                             MAIN                  <built-in>               
  CAF:readAndCountNewlinesWorker2 Main                  <no location info>         361          0    0.0    0.0     0.0    0.0
  CAF:readAndCountNewlinesWorker4 Main                  <no location info>         362          0    0.0    0.0     0.0    0.0
  CAF:readAndCountNewlinesWorker6 Main                  <no location info>         363          0    0.0    0.0     0.0    0.0
- main                            Main                  app/Main.hs:(29,1)-(41,20) 369          0    0.3    0.1    99.0  100.0
-  readAndCountNewlinesWorker     Main                  app/Main.hs:(18,1)-(26,11) 372        100   98.7   99.8    98.7   99.8
+ main                            Main                  app/Main.hs:(29,1)-(41,20) 369          0    0.3    0.0    99.3  100.0
+  readAndCountNewlinesWorker     Main                  app/Main.hs:(18,1)-(26,11) 372        100   99.0   99.9    99.0   99.9
   main.absolutePaths             Main                  app/Main.hs:37:7-59        371          1    0.0    0.1     0.0    0.1
   main.dir                       Main                  app/Main.hs:34:7-21        370          1    0.0    0.0     0.0    0.0
